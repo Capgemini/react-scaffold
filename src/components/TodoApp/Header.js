@@ -19,7 +19,7 @@ export default class Header extends Component {
   render() {
     return (
       <header id="header">
-        <h1>todos</h1>
+        <h2>Todo app</h2>
         <TodoTextInput
           id="new-todo"
           placeholder="What needs to be done?"

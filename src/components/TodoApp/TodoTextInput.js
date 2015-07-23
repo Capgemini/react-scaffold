@@ -15,7 +15,7 @@ class TodoTextInput extends Component {
 
   render() {
     return (
-      <div className="input-group">
+      <div>
         <input
           type="text"
           id={this.props.id}

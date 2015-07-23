@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import TodoApp from '../../components/TodoApp/TodoApp';
 
 class Home extends React.Component {
   static contextTypes = {
@@ -12,7 +13,7 @@ class Home extends React.Component {
       <div className="HomePage">
         <div className="HomePage-container">
           <h1>{title}</h1>
-          <p>...</p>
+          <TodoApp />
         </div>
       </div>
     );

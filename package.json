@@ -28,6 +28,7 @@
     "lodash": "3.10.0",
     "material-ui": "^0.9.2",
     "normalize.css": "3.0.3",
+    "object-assign": "^3.0.0",
     "react": "0.13.3",
     "react-router": "0.13.3",
     "source-map-support": "0.3.2",
@@ -74,7 +75,7 @@
     "start": "node server.js",
     "lint": "eslint src gulpfile.babel.js webpack.config.js && csscomb src/components --lint",
     "comb": "csscomb src/components --verbose",
-    "test": "eslint src && jest",
+    "test": "jest",
     "build": "gulp build",
     "serve": "gulp serve",
     "sync": "gulp sync"

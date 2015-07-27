@@ -21,7 +21,14 @@ let onSetMeta = (name, content) => {
 };
 
 function run() {
+  //Needed for onTouchTap
+  //Can go away when react 1.0 release
+  //Check this repo:
+  //https://github.com/zilverline/react-tap-event-plugin
   injectTapEventPlugin();
+
+  //Needed for React Developer Tools
+  window.React = React;
 
   Router.run(routes, Router.HistoryLocation, function(Handler, state) {
     React.render(<Handler

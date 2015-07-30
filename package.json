@@ -75,7 +75,7 @@
     "start": "node server.js",
     "lint": "eslint src gulpfile.babel.js webpack.config.js && csscomb src/components --lint",
     "comb": "csscomb src/components --verbose",
-    "test": "jest",
+    "test": "eslint src && jest",
     "build": "gulp build",
     "serve": "gulp serve",
     "sync": "gulp sync"

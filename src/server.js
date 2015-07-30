@@ -1,5 +1,3 @@
-/*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
-
 import 'babel/polyfill';
 import _ from 'lodash';
 import fs from 'fs';

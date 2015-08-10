@@ -18,12 +18,12 @@ const template = _.template(fs.readFileSync(templateFile, 'utf8'));
 
 server.get('*', function(req, res, next) {
   try {
-    let data = { description: '' };
-    /* @todo - figure out how we inject CSS */
+    let data = { title: '', description: '', css: '', body: '' };
     let css = [];
     Router.run(routes, req.url, function(Handler) {
       let app = (<Handler
         context={{
+          onInsertCss: value => css.push(value),
           onSetTitle: value => data.title = value,
           onSetMeta: (key, value) => data[key] = value
         }} />

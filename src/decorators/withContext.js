@@ -6,12 +6,14 @@ function withContext(ComposedComponent) {
 
     static propTypes = {
       context: PropTypes.shape({
+        onInsertCss: PropTypes.func,
         onSetTitle: PropTypes.func,
         onSetMeta: PropTypes.func
       })
     };
 
     static childContextTypes = {
+      onInsertCss: PropTypes.func.isRequired,
       onSetTitle: PropTypes.func.isRequired,
       onSetMeta: PropTypes.func.isRequired
     };
@@ -19,6 +21,7 @@ function withContext(ComposedComponent) {
     getChildContext() {
       let context = this.props.context;
       return {
+        onInsertCss: context.onInsertCss || emptyFunction,
         onSetTitle: context.onSetTitle || emptyFunction,
         onSetMeta: context.onSetMeta || emptyFunction
       };

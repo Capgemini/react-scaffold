@@ -55,6 +55,7 @@ describe('TodoStore', function() {
 
   it('can determine whether all to-do items are complete', function() {
     var i = 0;
+    var key;
     for (; i < 3; i++) {
       callback(actionTodoCreate);
     }

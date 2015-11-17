@@ -1,2 +1,2 @@
 # Ignore jest unit test files
-**/__tests__/*
+**/__tests__/**

@@ -19,20 +19,21 @@
     "npm": ">= 2.1"
   },
   "dependencies": {
-    "babel": "5.8.3",
+    "babel": "6.0.0",
     "classnames": "2.1.2",
     "eventemitter3": "1.1.0",
-    "express": "4.13.1",
+    "express": "4.16.0",
     "fastclick": "1.0.6",
     "flux": "2.0.3",
-    "lodash": "3.10.0",
+    "lodash": "4.17.5",
     "material-ui": "0.10.1",
     "normalize.css": "3.0.3",
     "object-assign": "^3.0.0",
-    "react": "0.13.3",
-    "react-router": "0.13.3",
+    "react": "0.14.0",
+    "react-router": "1.0.0",
     "source-map-support": "0.3.2",
-    "superagent": "1.2.0"
+    "superagent": "3.8.1",
+    "snyk": "^1.105.0"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.0",
@@ -80,6 +81,9 @@
     "test": "eslint --ignore-path /dev/null -c ./.eslintrc.jest src && jest",
     "build": "gulp build",
     "serve": "gulp serve",
-    "sync": "gulp sync"
-  }
+    "sync": "gulp sync",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
